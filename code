@@ -79,7 +79,7 @@ else:
 universe = np.zeros((100, 100))
 xos = int((100-hidt)/2)
 yos = int((100-widt)/2)
-universe[xos:xos+hidt, yos :yos+widt] = pattern
+universe[xos:xos+hidt, yos:yos+widt] = pattern
 new_universe = np.copy(universe)
 ims = []
 fig = plt.figure()
@@ -87,6 +87,7 @@ plt.axis('off')
 much = int(input('input count (1...10) >> '))
 much *= 100
 speed = int(input('input speed(1...10) >> '))
+speed = 1000/speed
 for k in range(much):
     ims.append((plt.imshow(universe, cmap='binary'),))
     nextgen()
