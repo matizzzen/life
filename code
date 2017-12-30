@@ -87,13 +87,10 @@ plt.axis('off')
 much = int(input('input count (1...10) >> '))
 much *= 100
 speed = int(input('input speed(1...10) >> '))
-speed = int(1000/speed)
-nachal = np.copy(universe)
 for k in range(much):
     ims.append((plt.imshow(universe, cmap='binary'),))
     nextgen()
 anime = ani.ArtistAnimation(fig, ims, interval=speed)
-#default(nachal)
 plt.show()
 if choise != 3:
     safe = input('Save pattern? (y/n)\n>> ')
