@@ -8,7 +8,7 @@ def survive(x, y):
     global universe
     count = int(np.sum(universe[x-1:x+2, y-1:y+2]) - universe[x, y])
     if universe[x, y] == 1:
-        if count < 2 or count > 4:
+        if count < 2 or count > 3:
             new_universe[x, y] = 0
     elif universe[x, y] == 0:
         if count == 3:
